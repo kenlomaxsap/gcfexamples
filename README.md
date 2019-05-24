@@ -23,10 +23,25 @@ debugging helloWorld locally:
   
 
 ## Google Cloud Functions example
+
 terminal> cd gcfexamples/gcfexample
+
+### Download the node modules using npm
 terminal> npm install express @google-cloud/debug-agent @google-cloud/storage @google-cloud/vision @google-cloud/speech @google-cloud/translate @google-cloud/text-to-speech
 
+### Enabled the google APIs:
+
+Chrome> https://console.developers.google.com/apis/api/translate.googleapis.com
+
+Chrome> https://console.developers.google.com/apis/api/texttospeech.googleapis.com
+
+Chrome> https://console.developers.google.com/apis/api/vision.googleapis.com
+
+Chrome> https://console.developers.google.com/apis/api/speech.googleapis.com
+
+## Authorize your local command line
 To execute google APIs you need to have "permission", which means a serviceaccount key.
+
 Chrome> https://console.cloud.google.com/iam-admin/serviceaccounts
 
 Download the json file and set your GOOGLE_APPLICATION_CREDENTIALS to it:
