@@ -51,18 +51,32 @@ terminal> export GOOGLE_APPLICATION_CREDENTIALS=pathToJSONAPIKey
 You can now run google api from your laptop:
 
 terminal> node debugging.js
+
 or
+
 terminal> node --inspect debugging.js
-chrome://inspect
+
+Use chrome://inspect to debug
 
 curl "http://localhost:8080/helloWorld?file=TheresaMay"
 
 curl "http://localhost:8080/gcfs?bucketin=gcfinput&bucketout=gcfoutput&targetLocale=fr&file=input.txt&gender=MALE&sourceLocale=en-US"
 
-To test in GC: {"bucketin":"gcfinput", "bucketout":"gcfoutput","targetLocale":"fr", "file":"input.txt"}
+To test in GC: 
+
+Create Google Function with the index.js and package.json
+
+{"bucketin":"gcfinput", "bucketout":"gcfoutput","targetLocale":"fr", "file":"input.txt"}
+
+Tiggered function by file upload
 
 StackDriver
+
+  Uncommemnt debug agent line and redeploy function
+
   Checkin code
+
   Set snapshot points
-  Invoke from Testing tab 
+
+  Invoke from Testing tab and see snapshots
   
