@@ -7,11 +7,7 @@ Install Node and NPM
 
 Create a new Google Cloud Project at cloud.google.com
 
-Once created, make sure it is selected, and select "Activate Cloud Shell", and "Launch Code Editor"
-
-(https://cloud.google.com/shell/docs/features, 
-
-https://cloud.google.com/shell/docs/starting-cloud-shell)
+From your Google Cloud Project, select "Activate Cloud Shell", and "Launch Code Editor"
 
 googleshell> git clone https://github.com/kenlomaxhybris/gcfexamples.git  
 
@@ -19,7 +15,7 @@ googleshell> git clone https://github.com/kenlomaxhybris/gcfexamples.git
 
 googleshell>  cd gcfexamples/node101
 
-note that your cloud shell has Node pre installed
+Note that your cloud shell has Node pre installed
 
 googleshell> node -v
 
