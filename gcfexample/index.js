@@ -1,5 +1,5 @@
 // For stackdriver support
-const debug = require ('@google-cloud/debug-agent').start({allowExpressions:true});
+//const debug = require ('@google-cloud/debug-agent').start({allowExpressions:true});
 // End
 
 exports.helloWorld = (json, res) => {
