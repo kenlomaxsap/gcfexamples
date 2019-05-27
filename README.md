@@ -86,37 +86,41 @@ Download the json file and set your GOOGLE_APPLICATION_CREDENTIALS to it:
 
 terminal> export GOOGLE_APPLICATION_CREDENTIALS=pathToJSONAPIKey 
 
-## Debug and run locally
+## Run locally 
 
 You can now run google api from your laptop:
 
 terminal> node debugging.js
 
-or
+curl "http://localhost:8080/helloWorld?file=TheresaMay"
+
+curl "http://localhost:8080/gcfs?bucketin=gcfinput&bucketout=gcfoutput&targetLocale=fr&file=input.txt&gender=MALE&sourceLocale=en-US"
+
+## Debug locally 
 
 terminal> node --inspect debugging.js
 
 Use chrome://inspect to debug
 
-curl "http://localhost:8080/helloWorld?file=TheresaMay"
-
-curl "http://localhost:8080/gcfs?bucketin=gcfinput&bucketout=gcfoutput&targetLocale=fr&file=input.txt&gender=MALE&sourceLocale=en-US"
-
-To test in GC: 
+# Upload to Google Cloud and run there 
 
 Create Google Function with the index.js and package.json
 
+Test it in the testing tab with:
 {"bucketin":"gcfinput", "bucketout":"gcfoutput","targetLocale":"fr", "file":"input.txt"}
 
-Tiggered function by file upload
 
-StackDriver
+# Upload the same function but this time to be Triggered by file upload
 
-  Uncommemnt debug agent line and redeploy function
+Confirm it runs when you upload files to the bucket
 
-  Checkin code
+# Debug a running Cloud Function with StackDriver
 
-  Set snapshot points
+Uncomment the debug-agent line at the top of index.js and redeploy function
 
-  Invoke from Testing tab and see snapshots
+Checkin code
+
+Set snapshot points
+
+Invoke from Testing tab and see snapshots
   
