@@ -102,7 +102,7 @@ terminal> node --inspect debugging.js
 
 Use chrome://inspect to debug
 
-# Upload to Google Cloud and run there 
+## Upload to Google Cloud and run there 
 
 Create Google Function with the index.js and package.json
 
@@ -110,17 +110,25 @@ Test it in the testing tab with:
 {"bucketin":"gcfinput", "bucketout":"gcfoutput","targetLocale":"fr", "file":"input.txt"}
 
 
-# Upload the same function but this time to be Triggered by file upload
+## Upload the same function but this time to be Triggered by file upload
 
 Confirm it runs when you upload files to the bucket
 
-# Debug a running Cloud Function with StackDriver
+## Debug a running Cloud Function with StackDriver
 
 Uncomment the debug-agent line at the top of index.js and redeploy function
 
-Checkin code
+Go to Stack Driver Console (https://console.cloud.google.com/debug)
+
+Select the code under "Upload a source code capture to Google servers!" and checkin your code
+
+googleshell>gcloud beta debug source upload --project=xxxxx --branch=xxxxxx .
+
+Return to  "Upload a source code capture to Google servers!" in the Stack Driver Console and select "Select Source" 
 
 Set snapshot points
 
-Invoke from Testing tab and see snapshots
+Invoke the function and notice how your Snapshots have been captured, without stopping your "productino code" :)
   
+Find out more @ https://cloud.google.com/functions/docs/
+
