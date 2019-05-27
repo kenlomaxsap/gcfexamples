@@ -68,7 +68,16 @@ Chrome> https://console.developers.google.com/apis/api/vision.googleapis.com
 
 Chrome> https://console.developers.google.com/apis/api/speech.googleapis.com
 
+## Create buckets bucketin and bucketout and upload some test files to bucketin
+
+googleshell> gsutil mb gs://gcfinput
+
+googleshell> gsutil mb gs://gcfoutput
+
+googleshell> gsutil cp material/* gs://gcfinput
+
 ## Authorize your local command line
+
 To execute google APIs you need to have "permission", which means a serviceaccount key.
 
 Chrome> https://console.cloud.google.com/iam-admin/serviceaccounts
@@ -76,6 +85,8 @@ Chrome> https://console.cloud.google.com/iam-admin/serviceaccounts
 Download the json file and set your GOOGLE_APPLICATION_CREDENTIALS to it:
 
 terminal> export GOOGLE_APPLICATION_CREDENTIALS=pathToJSONAPIKey 
+
+## Debug and run locally
 
 You can now run google api from your laptop:
 
