@@ -68,11 +68,11 @@ Chrome> https://console.developers.google.com/apis/api/speech.googleapis.com
 
 ## Create buckets bucketin and bucketout and upload some test files to bucketin
 
-googleshell> gsutil mb gs://gcfinput
+googleshell> gsutil mb gs://gcfinputbucket
 
-googleshell> gsutil mb gs://gcfoutput
+googleshell> gsutil mb gs://gcfoutputbucket
 
-googleshell> gsutil cp material/* gs://gcfinput
+googleshell> gsutil cp material/* gs://gcfinputbucket
 
 ## Authorize your local command line
 
@@ -92,7 +92,7 @@ terminal> node debugging.js
 
 curl "http://localhost:8080/helloWorld?file=TheresaMay"
 
-curl "http://localhost:8080/gcfs?bucketin=gcfinput&bucketout=gcfoutput&targetLocale=fr&file=input.txt&gender=MALE&sourceLocale=en-US"
+curl "http://localhost:8080/gcfs?bucketin=gcfinputbucket&bucketout=gcfoutputbucket&targetLocale=fr&file=input.txt&gender=MALE&sourceLocale=en-US"
 
 ## Debug locally 
 
@@ -105,7 +105,7 @@ Use chrome://inspect to debug
 Create Google Function with the index.js and package.json
 
 Test it in the testing tab with:
-{"bucketin":"gcfinput", "bucketout":"gcfoutput","targetLocale":"fr", "file":"input.txt"}
+{"bucketin":"gcfinputbucket", "bucketout":"gcfoutputbucket","targetLocale":"fr", "file":"input.txt"}
 
 
 ## Upload the same function but this time to be Triggered by file upload
