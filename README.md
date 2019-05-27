@@ -1,30 +1,59 @@
 # Material for a Google Cloud Functions Workshop
 
-terminal> git clone https://github.com/kenlomaxhybris/gcfexamples.git
 
+## Pre-requisites
+
+Install Node and NPM
+
+Create a new Google Cloud Project at cloud.google.com
+
+Once created, make sure it is selected, and select "Activate Cloud Shell", and "Launch Code Editor"
+
+(https://cloud.google.com/shell/docs/features, 
+
+https://cloud.google.com/shell/docs/starting-cloud-shell)
+
+googleshell> git clone https://github.com/kenlomaxhybris/gcfexamples.git  
 
 ## node101
 
-terminal> cd gcfexamples/node101
+googleshell>  cd gcfexamples/node101
 
-node js0
-node js1
-node js2
-node js3
-node js4
-node js5
-node eventloopexample
-node promise1
+note that your cloud shell has Node pre installed
+
+googleshell> node -v
+
+Hello World: googleshell> node js0
+
+Node functions: googleshell> node js1
+
+Node modules: googleshell> node js2
+
+Node's Express: googleshell>  node js3
+
+Exporting Modules: googleshell> node js4
+
+googleshell> node js5
+
+Event Loop: googleshell> node eventloopexample
+
+Promises: googleshell> node promise1
+
+googleshell> node promise2
 
 debugging helloWorld locally:
-  node --inspect index.js
-  chrome://inspect
-  curl "http://localhost:8080?name=TheresaMay"
-  
 
+terminal>  git clone https://github.com/kenlomaxhybris/gcfexamples.git ;  cd gcfexamples/node101
+
+terminal>  node --inspect index.js
+
+chrome>  chrome://inspect
+
+terminal> curl "http://localhost:8080?name=TheresaMay"
+  
 ## Google Cloud Functions example
 
-terminal> cd gcfexamples/gcfexample
+terminal> cd ../gcfexample
 
 ### Download the node modules using npm
 terminal> npm install express @google-cloud/debug-agent @google-cloud/storage @google-cloud/vision @google-cloud/speech @google-cloud/translate @google-cloud/text-to-speech
