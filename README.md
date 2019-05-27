@@ -41,7 +41,9 @@ Promises: googleshell> node promise1
 
 googleshell> node promise2
 
-debugging helloWorld locally:
+## Debugging
+
+You can debug locally:
 
 terminal>  git clone https://github.com/kenlomaxhybris/gcfexamples.git ;  cd gcfexamples/node101
 
