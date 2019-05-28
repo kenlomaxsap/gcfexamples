@@ -117,7 +117,7 @@ findJson = (json) => {
     // When called via events, we need to juggle the json
     json.bucketin=json.bucket;
     json.file=json.name;
-    json.bucketout="gcfoutput"
+    json.bucketout="gcfoutputbucket"
   }
   
   console.log("findJson: "+ JSON.stringify(json))
